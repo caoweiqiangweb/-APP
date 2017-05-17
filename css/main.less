@@ -1,0 +1,954 @@
+/* CSS Document */
+//html { font-size: 62.5%; }
+//@media only screen and (min-width: 320px){html {font-size: 62.5%!important;}}
+//@media only screen and (min-width: 360px){html {font-size: 72.5%!important;}}
+//@media only screen and (min-width: 400px){html {font-size: 82.5%!important;}}
+//@media only screen and (min-width: 480px){html {font-size: 94.0%!important;}}
+html,body { height: 100%;width: 100% }
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.border_radius(@radius){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+.Transform(@x,@y){
+  transform:translate(@x,@y);
+  -ms-transform:translate(@x,@y); 	/* IE 9 */
+  -moz-transform:translate(@x,@y); 	/* Firefox */
+  -webkit-transform:translate(@x,@y); /* Safari 和 Chrome */
+  -o-transform:translate(@x,@y); 	/* Opera */
+}
+//头部相同样式
+.top{
+  position: relative;
+  font-size:0.32rem;
+  color:#ffffff;
+  height:0.88rem;
+  background: #1D2331;
+  text-align: center;
+  a{
+    position: absolute;
+    width:0.32rem;
+    height:0.32rem;
+    top: 50%;
+    .Transform(0,-50%);
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    font-size: 0.32rem;
+    line-height:0.88rem;
+  }
+  .top_left{
+    left: 0;
+    margin-left:0.18rem;
+    width: 0.2rem;
+    height: 0.33rem;
+  }
+  .top_Middle{
+    right: 0;
+    margin-right: 0.85rem;
+  }
+  .top_right{
+    right: 0;
+    margin-right:0.18rem;
+  }
+}
+section{
+  width: 100%;
+  height: 100%;
+  background:#F5F5F5;
+}
+
+//DTU列表页面
+.dtu_page{
+  //display: none;
+  .top{
+    a{
+      width:0.32rem;
+      height:0.32rem;
+    }
+    h1{
+      font-size: 0.32rem;
+      line-height:0.88rem;
+    }
+  }
+  .subject{
+    width: 100%;
+    padding:0 0.18rem;
+    .items{
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;	/* Firefox 4 */
+      -webkit-transition: all 0.5s;	/* Safari 和 Chrome */
+      -o-transition: all 0.5s;	/* Opera */
+      .item{
+        position: relative;
+        margin-top: 0.2rem;
+        width: 100%;
+        height: 1.35rem;
+        background: #fff;
+        .border_radius(0.12rem);
+        border: 0.02rem solid #D7D7D7;
+        .stop{
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: -0.6rem;
+          .Transform(0,-50%);
+          width:0.56rem;
+          height:0.56rem;
+          padding:0.04rem ;
+          img{
+            width: 100%;
+          }
+        }
+        img{
+          width: 100%;
+        }
+        .items_left{
+          width: 1.05rem;
+          height: 0.99rem;
+          margin: 0.13rem 0 0 0.2rem;
+        }
+        .items_right{
+          width: 0.22rem;
+          height: 0.32rem;
+          margin:0.52rem 0.2rem 0 0;
+        }
+        .items_content{
+          padding-left: 0.2rem;
+          color:#999999;
+          line-height:0.3rem;
+          h2{
+            font-size: 0.4rem;
+            margin-top: 0.25rem;
+          }
+          span{
+            display: block;
+            margin-top:0.12rem;
+            font-size:0.24rem;
+          }
+        }
+      }
+    }
+
+  }
+  .dtu_page_back{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background: #34A924;
+    height:1.12rem;
+    font-size: 0.32rem;
+    color: #fff;
+    line-height:1.12rem;
+    text-align: center;
+    margin-top:0.4rem;
+  }
+}
+.Mask{
+  position: fixed;
+  display: none;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background:rgba(0,0,0,0.35);
+  .Mask_box{
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 87%;
+    padding: 1rem 0.4rem 0 0.4rem;
+    line-height: 0.3rem;
+    font-size: 0.32rem;
+    color:#333333;
+    .border_radius(0.12rem);
+    .Transform(-50%,-50%);
+    .exclamatory{
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #34A924;
+      .border_radius(50%);
+      position: absolute;
+      top: -0.75rem;
+      left: 50%;
+      margin-left: -0.75rem;
+      img{
+        width:0.56rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .Transform(-45%,-55%);
+      }
+
+    }
+    p{
+      margin-bottom: 0.44rem;
+    }
+    button{
+      width: 100%;
+      line-height: 0.72rem;
+      text-align: center;
+      .border_radius(0.12rem);
+      border: none;
+      font-size: 0.32rem;
+      outline: none;
+      margin-bottom: 0.2rem;
+    }
+    .yes{
+      background: #34A924;
+      color: #fff;
+      &:active{
+        background: #59A91B;
+      }
+    }
+    .no{
+      background: #fff;
+      border: 0.01rem solid #34A924;
+      color:#34A924;
+      &:active{
+        background:#D9D9D9;
+      }
+    }
+  }
+}
+//DTU页面
+.new_dtu_page{
+  display: none;
+  .top{
+    position: relative;
+    width: 100%;
+    height:7.06rem;
+    img{
+      width: 100%;
+    }
+    .close{
+      width:0.5rem;
+      height: 0.5rem;
+      padding: 0.085rem;
+      position: absolute;
+      top: 0.315rem;
+      right: 0.315rem;
+    }
+    .text{
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      .Transform(0,57%);
+      p{
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 0.24rem;
+        line-height: 0.32rem;
+      }
+    }
+  }
+  .content{
+    width: 100%;
+    padding:0 0.18rem;
+    font-size: 0.2rem;
+    input{
+      width: 100%;
+      height: 0.77rem;
+      line-height: 0.77rem;
+      border: 0.02rem solid #C9C9C9;
+      color:#999999;
+      font-size: 0.24rem;
+      background:#F5F5F5;
+      padding-left:0.3rem;
+      .border_radius(0.12rem);
+      margin: 0.55rem 0 0.15rem 0;
+    }
+    p{
+      line-height: 0.3rem;
+      font-size: 0.2rem;
+      text-align: center;
+      color: #666666;
+    }
+    .ok_box{
+      width: 1.54rem;
+      height: 1.54rem;
+      .border_radius(50%);
+      background: #34A924;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 0.4rem;
+      line-height: 1.54rem;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 0.4rem;
+    }
+  }
+}
+//DTU详情页面
+.dtu_details_page{
+  display: none;
+  .information{
+    margin-top: 0.4rem;
+    padding-left: 0.4rem;
+    .items_left{
+      width: 1.3rem;
+      height: 1.23rem;
+      img{
+        width: 100%;
+      }
+    }
+    .items_content{
+      font-size:0.2rem;
+      line-height: 0.36rem;
+      color: #666666;
+      padding-left: 0.2rem;
+      overflow: hidden;
+      float: inherit;
+      h3{
+        font-size: 0.4rem;
+        line-height:0.5rem;
+        color: #333;
+      }
+      p{
+        line-height: 0.36rem;
+        img{
+          vertical-align:middle;
+          padding-right: 0.05rem;
+        }
+      }
+      .clock{
+        img{
+          width: 0.2rem;
+          height: 0.2rem;
+        }
+      }
+      .usb{
+        img{
+          width: 0.2rem;
+          height: 0.25rem;
+        }
+      }
+    }
+  }
+  .items{
+    padding:0 0.2rem;
+    width: 100%;
+    margin: 0.25rem 0;
+    .item_one{
+      background:url("../images/details.png") no-repeat;
+    }
+    .item_two{
+      background:url("../images/Coming_Soon_2.png") no-repeat;
+    }
+    .item_three{
+      background:url("../images/Coming_Soon_3.png") no-repeat;
+    }
+    .item_four{
+      background:url("../images/Coming_Soon_4.png") no-repeat;
+    }
+    .item_five{
+      background:url("../images/Coming_Soon_5.png") no-repeat;
+    }
+    .item_six{
+      background:url("../images/Coming_Soon_6.png") no-repeat;
+    }
+    .item{
+      width: 100%;
+      height: 2.3rem;
+      background-size: 100% 100%;
+      font-size:0.24rem;
+      color:#1d2331;
+      margin-top: 0.15rem;
+      .border_radius(0.12rem);
+      box-shadow: 0px 2px 5px #ccc;
+      font-weight: bold;
+      .text_one{
+        font-size:0.36rem;
+        line-height:1.33rem;
+        text-align: right;
+        color: #fff;
+        padding-right:0.15rem;
+        font-weight: bold;
+        span{
+          font-family:Arial;
+          font-size:0.24rem;
+          font-weight: normal;
+        }
+      }
+      .text_two{
+        line-height: 0.90rem;
+        padding-left: 0.6rem;
+      }
+      .text_one_one{
+        font-size: 0.3rem;
+        line-height: 0.9rem;
+        padding-right: 0.40rem;
+      }
+      .text_three{
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        padding-right: 0.40rem;
+        color: #f08300;
+        font-weight: bold;
+      }
+    }
+  }
+}
+//Lighting操控页面
+.lighting_control{
+  display: none;
+  .sensor{
+    position: relative;
+    height: 0.7rem;
+    background:url("../images/lighting_control.jpg");
+    background-size: 100%;
+    font-size: 0.24rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.7rem;
+    h3{
+      line-height: 0.7rem;
+      font-size: 0.32rem;
+      padding-left: 0.4rem;
+    }
+    span{
+      position: absolute;
+      top: 0;
+      right:0.4rem;
+    }
+  }
+  .items{
+    padding: 0 0.2rem;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.2rem;
+    .item{
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;	/* Firefox 4 */
+      -webkit-transition: all 0.5s;	/* Safari 和 Chrome */
+      -o-transition: all 0.5s;	/* Opera */
+      left:0rem;
+      position: relative;
+      margin-bottom: 0.2rem;
+      width: 100%;
+      height:2.04rem;
+      background:url("../images/Lighting_2.png") no-repeat;
+      background-size:100% 100%;
+      .border_radius(0.12rem);
+      box-shadow: 0px 2px 5px #ccc;
+      .stop{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: -0.6rem;
+        .Transform(0,-50%);
+        width:0.56rem;
+        height:0.56rem;
+        padding:0.04rem ;
+        img{
+          width: 100%;
+        }
+      }
+      .item_top{
+        line-height: 0.97rem;
+        height: 0.97rem;
+        width: 100%;
+        color: #fff;
+        strong{
+          padding-left: 0.3rem;
+          font-size: 0.4rem;
+        }
+        .fr{
+          width: 1.24rem;
+          padding-left: 0.2rem;
+          text-align: center;
+          font-size: 0.32rem;
+        }
+      }
+      .item_bottom{
+        width: 100%;
+        line-height: 1.05rem;
+        font-size: 0.24rem;
+        color: #fff;
+        .brightness{
+          padding-left: 0.5rem;
+          margin-left:0.38rem;
+          width: 1.81rem;
+          color:#999;
+          font-weight: bold;
+          font-size: 0.35rem;
+          line-height: 1rem;
+        }
+        .item_btn{
+          width: 1.94rem;
+          text-align: center;
+          height: 0.49rem;
+          .border_radius(0.12rem);
+          background: #C8C8C8;
+          line-height: 0.49rem;
+          margin:0.27rem 0.18rem 0 0 ;
+        }
+        .green_btn{
+          background: #34A924;
+        }
+      }
+      .del{
+        height: 2.04rem;
+        .border_radius(0.12rem);
+        width:1rem;
+        line-height: 2.04rem;
+        text-align: center;
+        color: #fff;
+        font-size:0.4rem;
+        position: absolute;
+        top: 0;
+        background:#DA2627;
+        right: -1.2rem;
+      }
+    }
+    .item.Del{
+      left: -0.6rem;
+      width: 96%;
+    }
+  }
+  .lighting_control_bottom{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.32rem;
+    button{
+      float: left;
+      width: 50%;
+      height: 0.98rem;
+      color: #ffffff;
+      line-height: 0.98rem;
+      text-align: center;
+      border: none;
+      font-size: 0.32rem;
+    }
+    .btn_left{
+      background: #2E9023;
+    }
+    .btn_right{
+      background: #226619;
+    }
+    input{
+      display: none !important;
+    }
+    .dww{
+      min-width:6.4rem !important;
+    }
+    .dwwl0{
+      width: 6.4rem;
+    }
+    .dwwc{
+      max-width: 100% !important;
+    }
+    .mbsc-android-holo .dwhl{
+      padding: 1px 0px;
+    }
+    .mbsc-android-holo .dwwol{
+      width: 6.4rem;
+      left: 0 !important;
+      border-top:2px solid #CCCCCC;
+      border-bottom:2px  solid #CCCCCC;
+    }
+  }
+}
+//Lighting分组详情页面
+.lighting_details{
+  display: none;
+  position: relative;
+  .top_Middle{
+    margin-right: 0.93rem;
+  }
+  .lighting_Middle{
+    margin-right: 1.4rem;
+  }
+  .lighting_details_text2{
+    display: none;
+  }
+  .top_right{
+    color: #fff;
+    width: auto;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size:0.32rem ;
+  }
+  .items{
+    .item{
+      position: relative;
+      width: 1.8rem;
+      height: 0.56rem;
+      background:url("../images/details_1.jpg") no-repeat;
+      background-size: 100% 100%;
+      font-size: 0.24rem;
+      line-height: 0.56rem;
+      color:#df8300;
+      padding-left: 0.6rem;
+      margin: 0.16rem 0.1rem 0 0.2rem;
+      float: left;
+      img{
+        display: none;
+        position: absolute;
+        top:0.4rem;
+        right:-0.05rem;
+        width:0.23rem;
+      }
+    }
+  }
+  .lighting_bottom{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size:0.2rem;
+    line-height: 0.5rem;
+    color: #fff;
+    text-align: center;
+    .lighting_left{
+      background:#2F9525;
+      width: 50%;
+      height: 1.12rem;
+      img{
+        margin-top:0.15rem;
+        width: 0.48rem;
+      }
+    }
+    .lighting_right{
+      height: 1.12rem;
+      background: #22641A;
+      width: 50%;
+      img{
+        margin-top:0.15rem;
+        width: 0.46rem;
+      }
+    }
+  }
+
+  //切换Group对话框
+  .Group_Mask{
+    display: none;
+    text-align: center;
+    .Mask_box{
+      background:#F7F7F7;
+    }
+    p{
+      font-size: 0.4rem;
+    }
+    #Group_dummy{
+      display: none !important;
+    }
+    .mbsc-android-holo-light .dwwr{
+      background:#F7F7F7;
+    }
+    .mbsc-android-holo .dwwol{
+      border: none;
+    }
+  }
+}
+//添加RTU页面
+.add_RTU{
+  display: none;
+  .items{
+    font-size:0.26rem;
+    color: #4c4c4c;
+    padding:0.4rem 0 0 0.3rem ;
+    line-height: 0.3rem;
+    img{
+      margin-top:0.8rem;
+      width:6rem;
+    }
+  }
+}
+//Lighting自动设置页面
+.Lighting_automatic{
+  display: none;
+  position: relative;
+  height:10.5rem;
+  .top_right{
+    color: #fff;
+    width: auto;
+    margin-left: 0.2rem;
+  }
+  .topTime{
+    background:#F5F5F5;
+    line-height:0.55rem;
+    height:0.55rem;
+    font-size: 0.22rem;
+    color: #808080;
+    text-align: center;
+    img{
+      width: 0.2rem;
+      margin: 0.18rem 0.12rem 0 0;
+    }
+  }
+  .item,.item_top{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    div{
+      height:0.9rem;
+      -webkit-box-flex:1;
+      -webkit-flex:1;
+      -ms-flex:1;
+      flex:1;
+      border-left: 0.02rem solid #E5E5E5;
+      line-height: 0.9rem;
+      text-align: center;
+      font-size: 0.4rem;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .redcolor{
+      color:#d23f3f;
+    }
+    div:nth-of-type(1){
+      border: none;
+    }
+    .item_1{
+      background:#58C848;
+    }
+    .item_2{
+      background:#58C848;
+    }
+    .item_3{
+      background:#FDC97E;
+    }
+    .item_4{
+      background:#4BB23C;
+    }
+    .item_5{
+      background:#4BB23C;
+    }
+    .item_6{
+      background:#FFBA6F;
+    }
+    .item_7{
+      background:#34A924;
+    }
+    .item_8{
+      background:#34A924;
+    }
+    .item_9{
+      background:#F9A96C;
+    }
+    .item_10{
+      background:#2FA01D;
+    }
+    .item_11{
+      background:#2FA01D;
+    }
+    .item_12{
+      background:#E68D65;
+    }
+    .item_13{
+      background:#299319;
+    }
+    .item_14{
+      background:#299319;
+    }
+    .item_15{
+      background:#D87452;
+    }
+  }
+  .item_top{
+    div{
+      font-size:0.32rem;
+      color:#333333;
+      background: #ffffff;
+      font-weight: normal;
+    }
+  }
+  .Lighting_automatic_bottom{
+    display: none;
+    position: absolute;
+    bottom:0.5rem;
+    button{
+      display: block;
+      width: 100%;
+      background:#2E9023;
+      line-height: 0.7rem;
+      border: none;
+      outline: none;
+      font-size: 0.4rem;
+      text-align: center;
+      color: #fff;
+    }
+    input{
+      display: none !important;
+    }
+    .mbsc-android-holo-light{
+      float: left;
+      width: 2.13rem;
+      font-weight: bold !important;
+      .dwwr{
+        min-width: 2.13rem !important;
+      }
+      .dwwol{
+        border-top:0.02rem solid #CCCCCC;
+        border-bottom:0.02rem  solid #CCCCCC;
+      }
+    }
+  }
+}
+
+//删除页面的样式
+.delete.items{
+  padding-left: 0.6rem;
+}
+.lighting_control .items.delete .item .item_bottom .brightness{
+  padding-left: 0.45rem;
+}
+.lighting_Temperature{
+  display: none;
+  .top_right{
+    color: #fff;
+    width: auto;
+    height: auto;
+  }
+  .item_1{
+    width: 100%;
+    height: 0.72rem;
+    line-height: 0.72rem;
+    font-size: 0.32rem;
+    color:#a6a6a6;
+    background:#E6E6E6;
+    padding-left: 0.4rem;
+    img{
+      width: 0.17rem;
+      margin-top: 0.2rem;
+    }
+  }
+  .items{
+    width: 100%;
+    padding-left:0.4rem;
+    background: #ffffff;
+    margin-bottom: 0.25rem;
+    .item{
+      height: 0.85rem;
+      line-height: 0.85rem;
+      font-size: 0.28rem;
+      color: #555555;
+      border-bottom: 0.01rem solid #E6E6E6;
+      .text-right{
+        width: 1.70rem;
+      }
+      label{
+        text-align: center;
+        margin-top: 0.2rem;
+        line-height: 0.44rem;
+        display: inline-block;
+        width:0.66rem;
+        height: 0.44rem;
+        background:#E6E6E6;
+      }
+    }
+    .item_last{
+      border: none;
+    }
+    input{
+      margin-top: 0.2rem;
+      margin-right: 0.2rem;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: relative;
+      width: 0.75rem;
+      height:0.46rem;
+      border:0.02rem solid #DFDFDF;
+      outline: 0;
+      .border_radius(0.22rem);
+      box-sizing: border-box;
+      background: #fff;
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:0.44rem;
+        height:0.44rem;
+        .border_radius(0.22rem);
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+      }
+
+    }
+    input:checked {
+      border-color: #04BE02;
+      background-color: #04BE02;
+      &:before {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      &:after {
+        -webkit-transform: translateX(0.25rem);
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+  .temperature_one{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    button{
+      display: inline-block;
+      height: 0.7rem;
+      width: 50%;
+      background: #2A8621;
+      font-size:0.32rem;
+      color: #fff;
+      text-align: center;
+      line-height: 0.7rem;
+      border: none;
+      outline: none;
+    }
+    input{
+      display: none;
+    }
+    .mbsc-android-holo-light{
+      display: none;
+    }
+    .mbsc-w-p{
+      width: 100%;
+    }
+    .dwwol{
+      width: 100%;
+      left:0;
+      border-top: 2px solid #C8C8C8;
+      border-bottom: 2px solid #C8C8C8;
+    }
+    .dw{
+      display: block;
+    }
+  }
+}
+//错误提示框
+.Mask_Prompt{
+  display: none;
+  position: fixed;
+  width: 4rem;
+  top: 50%;
+  left: 50%;
+  background: #626262;
+  color: #fff;
+  text-align: center;
+  padding: 0.3rem 0;
+  font-size:0.32rem;
+  line-height: 0.3rem;
+  .border_radius(0.12rem);
+  .Transform(-50%,-50%);
+}
+

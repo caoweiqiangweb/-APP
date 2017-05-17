@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/cssReset.css"/>
+    <link rel="stylesheet" href="css/mobiscroll.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<!--DTU列表页面-->
+<section class="dtu_page">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/add.png" alt=""/></a>
+        <h1>Control Center Guide</h1>
+        <a href="javascript:;" class="top_right"><img src="images/delete.png" alt=""/></a>
+    </div>
+    <div class="subject">
+        <div class="items"><!--delete-->
+            <div class="item">
+                <!--删除页面的删除键-->
+                <div class="stop">
+                    <img src="images/stop.png" alt=""/>
+                </div>
+                <div class="fl items_left"><img src="images/dtu_1.jpg" alt=""/></div>
+                <div class="fl items_content"><h2>DTU_10001570</h2><span>Disconnected</span></div>
+                <div class="fr items_right"><img src="images/arrow.png" alt=""/></div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="dtu_page_back" id="dtu_page_back">Back To Control Center</a>
+    <!--删除页面的模态框-->
+    <div class="Mask del_Mask">
+        <div class="Mask_box">
+            <div class="exclamatory">
+                <img src="images/exclamatory.png" alt=""/>
+            </div>
+            <p>Are you sure to delete？</p>
+            <button class="yes">YES</button>
+            <button class="no">NO</button>
+        </div>
+    </div>
+</section>
+<!--新增DTU页面-->
+<section class="new_dtu_page">
+    <div class="top">
+        <img src="images/new_dtu_page.jpg" alt=""/>
+        <div class="close">
+            <img src="images/Close.png" alt=""/>
+        </div>
+        <div class="text">
+            <p>SLIDE DOWN TO SCAN REGISTATION CODE</p>
+            <p>(NOT AVAILABLE FOR DEMO USE)</p>
+        </div>
+    </div>
+    <div class="content">
+        <input type="text" placeholder='Please enter your DTU registration code'/>
+        <p>See the product ID number displayed after scratch</p>
+        <div class="ok_box">OK</div>
+    </div>
+</section>
+<!--DTU详情页面-->
+<section class="dtu_details_page">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/arrow_left.png" alt=""/></a>
+        <h2></h2>
+    </div>
+    <div class="information clearfix">
+        <div class="fl items_left"><img src="images/dtu_2.jpg" alt=""/></div>
+        <div class="fl items_content">
+            <h3>DTU_10001570</h3>
+            <p class="clock"><img src="images/clock.png" alt=""/>DTU time:<span class="dtu_details_time"></span></p>
+            <p class="usb"><img src="images/USB.png" alt=""/>0/100 RTU(100pcs RTU max for one DTU)</p></div>
+    </div>
+    <div class="items">
+        <div class="item item_one">
+            <p class="text_one text_Lighting">Lighting 2.0</p>
+            <p class="text_two fl">RTU: <span>75</span></p>
+            <p class="fr text_one_one">Group:3</p>
+        </div>
+        <div class="item item_two">
+            <p class="text_one">THC 1.0<span> ( Temperature,Humidity,CO2 )</span></p>
+            <p class="text_two fl">RTU: <span>0</span></p>
+            <p class="text_three fr">coming soon</p>
+        </div>
+        <div class="item item_three">
+            <p class="text_one">DOSER 1.0<span> ( PH,EC,Stepper Pump )</span></p>
+            <p class="text_two fl">RTU: <span>0</span></p>
+            <p class="text_three fr">coming soon</p>
+        </div>
+        <div class="item item_four">
+            <p class="text_one">DLI 1.0<span> ( Daily Light Integral )</span></p>
+            <p class="text_two fl">RTU: <span>0</span></p>
+            <p class="text_three fr">coming soon</p>
+        </div>
+        <div class="item item_five">
+            <p class="text_one">MONITOR 1.0</p>
+            <p class="text_two fl">RTU: <span>0</span></p>
+            <p class="text_three fr">coming soon</p>
+        </div>
+        <div class="item item_six">
+            <p class="text_one">SECURITY 1.0</p>
+            <p class="text_two fl">RTU: <span>0</span></p>
+            <p class="text_three fr">coming soon</p>
+        </div>
+    </div>
+</section>
+<!--Lighting操控页面-->
+<section class="lighting_control">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/arrow_left.png" alt=""/></a>
+        <h2>Lighting</h2>
+        <a href="javascript:;" class="top_Middle"><img src="images/add.png" alt=""/></a>
+        <a href="javascript:;" class="top_right"><img src="images/delete.png" alt=""/></a>
+    </div>
+    <div class="sensor">
+        <h3>Temp:82°F</h3><span>settings</span>
+    </div>
+    <div class="items">
+        <div class="item">
+            <div class="stop"><img src="images/stop.png" alt=""/></div>
+            <div class="item_top"><strong class="fl">Group<span>1</span></strong><span class="fr lighting_control_one">25</span></div>
+            <div class="item_bottom"><label class="fl brightness" id="Box1">Auto</label><div class="item_btn fr green_btn">Auto Setting</div>
+            </div><div class="del">Del</div>
+        </div>
+        <div class="item">
+            <div class="stop">
+                <img src="images/stop.png" alt=""/>
+            </div>
+            <div class="item_top"><strong class="fl">Group<span>2</span></strong><span class="fr lighting_control_two">25</span></div>
+            <div class="item_bottom"><label class="fl brightness" id="Box2">60%</label><div class="item_btn fr gray_btn">Auto Setting</div></div>
+            <div class="del">
+                Del
+            </div>
+        </div>
+        <div class="item">
+            <div class="stop">
+                <img src="images/stop.png" alt=""/>
+            </div>
+            <div class="item_top"><strong class="fl">Group<span>3</span></strong><span class="fr lighting_control_three">25</span></div>
+            <div class="item_bottom"><label class="fl brightness" id="Box3">60%</label><div class="item_btn fr gray_btn">Auto Setting</div></div>
+            <div class="del">
+                Del
+            </div>
+        </div>
+    </div>
+    <!--添加模态框-->
+    <div class="Mask add_mask">
+        <div class="Mask_box">
+            <div class="exclamatory">
+                <img src="images/exclamatory.png" alt=""/>
+            </div>
+            <p>Would you like to add a new group?</p>
+            <button class="yes">YES</button>
+            <button class="no">NO</button>
+        </div>
+    </div>
+    <!--删除模态框-->
+    <div class="Mask Del_mask">
+        <div class="Mask_box">
+            <div class="exclamatory">
+                <img src="images/exclamatory.png" alt=""/>
+            </div>
+            <p>Would you like to delete this group</p>
+            <button class="yes">YES</button>
+            <button class="no">NO</button>
+        </div>
+    </div>
+    <!--亮度-->
+    <div class="lighting_control_bottom">
+        <button class="btn_left">Cancel</button>
+        <button class="btn_right">Save</button>
+        <select id="brightnessBox1">
+            <option value="SUPER">Super</option>
+            <option value="100%">100%</option>
+            <option value="95%">95%</option>
+            <option value="90%">90%</option>
+            <option value="85%">85%</option>
+            <option value="80%">80%</option>
+            <option value="75%">75%</option>
+            <option value="70%">70%</option>
+            <option value="65%">65%</option>
+            <option value="60%">60%</option>
+            <option value="55%">55%</option>
+            <option value="50%">50%</option>
+            <option value="OFF">OFF</option>
+            <option value="AUTO">Auto</option>
+        </select>
+    </div>
+</section>
+<!--Lighting分组详情页面-->
+<section class="lighting_details">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/arrow_left.png" alt=""/></a>
+        <h2>Group1</h2>
+        <a href="javascript:;" class="top_Middle"><img src="images/add.png" alt=""/></a>
+        <a href="javascript:;" class="top_right"><span class="lighting_details_text1">Edit</span><span class="lighting_details_text2">Cancel</span></a>
+    </div>
+    <div class="items">
+    </div>
+    <div class="lighting_bottom">
+        <div class="lighting_left fl"><img src="images/details_3.png" alt=""/><br/>Change Group</div>
+        <div class="lighting_right fl"><img src="images/delete.png" alt=""/><br/>Delete</div>
+    </div>
+    <!--模态框-->
+    <div class="Mask lighting_Mask">
+        <div class="Mask_box">
+            <div class="exclamatory">
+                <img src="images/lamp.png" alt=""/>
+            </div>
+            <p>Ballast:None</p>
+            <button class="yes">OK</button>
+        </div>
+    </div>
+    <!--切换Group对话框-->
+    <div class="Mask Group_Mask">
+        <div class="Mask_box">
+            <div class="exclamatory">
+                <img src="images/delete_4.png" alt=""/>
+            </div>
+            <p>Select a Group</p>
+            <select name="City" id="Group">
+                <!--<option value="1">Group2</option>-->
+                <!--<option value="2">Group3</option>-->
+            </select>
+            <button class="yes">Change</button>
+            <button class="no">cancel</button>
+        </div>
+    </div>
+</section>
+<!--添加RTU页面-->
+<section class="add_RTU">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/arrow_left.png" alt=""/></a>
+        <h2>Add RTU</h2>
+    </div>
+    <div class="items">Reminder:Please mark your RTUs according to locationsand groups of matching ballasts prior to identify RTUswith DTU
+        <img src="images/dynamic.gif" alt=""/>
+    </div>
+</section>
+<!--Lighting自动设置页面-->
+<section class="Lighting_automatic">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/arrow_left.png" alt=""/></a>
+        <h2>Group1</h2>
+        <a href="javascript:;" class="top_right">Save</a>
+    </div>
+    <div class="topTime">
+        <img src="images/clock.png" alt=""/><span><span class="dateMonth"></span> <span class="dateDate"></span> <span class="dateYear"></span>,<span class="dataTime"></span></span>
+    </div>
+    <div class="items">
+        <div class="item_top">
+            <div>Start Time</div>
+            <div>End Time</div>
+            <div>Power</div>
+        </div>
+        <div class="item">
+            <div class="item_1">00:00</div>
+            <div class="item_2">06:00</div>
+            <div class="item_3">100%</div>
+        </div>
+        <div class="item">
+            <div class="item_4">06:00</div>
+            <div class="item_5">12:00</div>
+            <div class="item_6">OFF</div>
+        </div>
+        <div class="item">
+            <div class="item_7">12:00</div>
+            <div class="item_8">18:00</div>
+            <div class="item_9">SUPER</div>
+        </div>
+        <div class="item">
+            <div class="item_10">18:00</div>
+            <div class="item_11">24:00</div>
+            <div class="item_12">50%</div>
+        </div>
+        <div class="item item_box_1 ">
+            <div class="item_13">━ ━</div>
+            <div class="item_14">━ ━</div>
+            <div class="item_15">━ ━</div>
+        </div>
+    </div>
+    <div class="Lighting_automatic_bottom">
+        <button>OK</button>
+        <select name="City" id="demo">
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+        </select>
+        <select name="City" id="demo1">
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="30">29</option>
+            <option value="29">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select>
+        <select name="City" id="demo2">
+            <option value="SUPER">SUPER</option>
+            <option value="100%">100%</option>
+            <option value="95%">95%</option>
+            <option value="90%">90%</option>
+            <option value="85%">85%</option>
+            <option value="80%">80%</option>
+            <option value="75%">75%</option>
+            <option value="70%">70%</option>
+            <option value="65%">65%</option>
+            <option value="60%">60%</option>
+            <option value="55%">55%</option>
+            <option value="50%">50%</option>
+            <option value="OFF">OFF</option>
+        </select>
+        <select name="City1" id="demo3" style="display: none">
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+        </select>
+        <select name="City2" id="demo4" style="display: none;">
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="30">29</option>
+            <option value="29">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select>
+    </div>
+</section>
+
+<section class="lighting_Temperature">
+    <div class="top">
+        <a href="javascript:;" class="top_left"><img src="images/arrow_left.png" alt=""/></a>
+        <h2>Temperature</h2>
+        <a href="javascript:;" class="top_right">Save</a>
+    </div>
+    <div class="item_1">
+        <img src="images/lighting_Temperature_1.png" alt=""/>
+        Current Temp:82°F
+    </div>
+    <div class="items">
+        <div class="item">
+            <span class="text-left">Temp Exceeds</span>
+            <div class="text-right fr">
+                <label class="label_one">70</label>
+                <span>°F</span>
+            </div>
+
+        </div>
+        <div class="item">
+            <span class="text-left">Dim Down</span>
+            <div class="text-right fr">
+                <label class="label_two">1</label>
+                <span>%/Min</span>
+            </div>
+        </div>
+        <div class="item item_last">
+            <input class="fr" type="checkbox">
+        </div>
+    </div>
+    <div class="items">
+        <div class="item">
+            <span class="text-left">Temp Exceeds</span>
+            <div class="text-right fr">
+                <label class="label_three">80</label>
+                <span>°F</span>
+            </div>
+
+        </div>
+        <div class="item">
+            <span class="text-left">Turn Off ballast</span>
+            <div class="text-right fr">
+                <input class="fr" type="checkbox">
+            </div>
+        </div>
+    </div>
+    <div class="temperature_one">
+        <button class="temperature_btn_one">Cancel</button><button class="temperature_btn_two">OK</button>
+        <select name="temperature" id="temperature1">
+            <option value="1">70</option>
+            <option value="2">71</option>
+            <option value="3">72</option>
+            <option value="4">73</option>
+            <option value="5">74</option>
+            <option value="6">75</option>
+            <option value="7">76</option>
+            <option value="8">77</option>
+            <option value="9">79</option>
+            <option value="10">80</option>
+            <option value="11">81</option>
+            <option value="12">82</option>
+            <option value="13">83</option>
+            <option value="14">84</option>
+            <option value="15">85</option>
+            <option value="16">86</option>
+            <option value="17">87</option>
+            <option value="18">88</option>
+            <option value="19">89</option>
+            <option value="20">90</option>
+            <option value="21">91</option>
+            <option value="22">92</option>
+            <option value="23">93</option>
+            <option value="24">94</option>
+            <option value="25">95</option>
+            <option value="26">96</option>
+            <option value="27">97</option>
+            <option value="28">98</option>
+        </select>
+        <select name="temperature" id="temperature2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <select name="temperature" id="temperature3">
+            <option value="1">72</option>
+            <option value="2">73</option>
+            <option value="3">74</option>
+            <option value="4">75</option>
+            <option value="5">76</option>
+            <option value="6">77</option>
+            <option value="7">78</option>
+            <option value="8">79</option>
+            <option value="9">80</option>
+            <option value="10">81</option>
+            <option value="11">82</option>
+            <option value="12">83</option>
+            <option value="13">84</option>
+            <option value="14">85</option>
+            <option value="15">86</option>
+            <option value="16">87</option>
+            <option value="17">89</option>
+            <option value="18">90</option>
+            <option value="19">91</option>
+            <option value="20">92</option>
+            <option value="21">93</option>
+            <option value="22">94</option>
+            <option value="23">95</option>
+            <option value="24">96</option>
+            <option value="25">97</option>
+            <option value="26">98</option>
+            <option value="27">99</option>
+            <option value="28">100</option>
+        </select>
+    </div>
+
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/mobiscroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
